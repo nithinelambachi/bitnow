@@ -2,35 +2,9 @@
 import { useState, useEffect, useRef } from 'react';
 import Button from '@/components/ui/Button';
 import Image from 'next/image';
-
 export default function HeroSection() {
   const [watchVideoClicked, setWatchVideoClicked] = useState(false);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [scrollY, setScrollY] = useState(0);
   const containerRef = useRef(null);
-  const sustainableButtonRef = useRef(null);
-  const comprehensiveButtonRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    const handleMouseMove = (e) => {
-      if (containerRef?.current) {
-        const rect = containerRef?.current?.getBoundingClientRect();
-        setMousePosition({
-          x: e?.clientX - rect?.left,
-          y: e?.clientY - rect?.top,
-        });
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    document.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
 
   const handleLearnMore = () => {
     console.log('Learn More clicked');
@@ -84,7 +58,6 @@ export default function HeroSection() {
                 <div className="flex justify-center items-end self-center w-full sm:w-[60%] lg:w-[40%] p-3">
                   <div className="flex flex-col justify-start items-start mt-[66px] sm:mt-[99px] lg:mt-[132px] h-24">
                     <div
-                      ref={sustainableButtonRef}
                       className="absolute z-30 transition-transform duration-300 ease-out flex items-start"
                       style={{
                         animation: 'float 4s ease-in-out infinite',
@@ -124,7 +97,6 @@ export default function HeroSection() {
 
                 <div className="absolute top-0 right-0 w-full h-24 flex justify-end items-start">
                   <div
-                    ref={comprehensiveButtonRef}
                     className="transition-transform duration-300 ease-out flex flex-col items-end"
                     style={{
                       willChange: 'transform',

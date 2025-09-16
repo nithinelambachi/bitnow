@@ -5,7 +5,6 @@ import Image from 'next/image';
 export default function TestimonialsSection() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const animationFrameRef = useRef(null);
-  const isAnimatingRef = useRef(false);
 
   const testimonials = [
     {
