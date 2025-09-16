@@ -147,13 +147,36 @@ export default function HeroSection() {
       <style jsx>{`
         @keyframes float {
           0% {
-            transform: translateY(0px);
+            transform: translate(0px, 0px);
+          }
+          25% {
+            transform: translate(5px, -10px);
           }
           50% {
-            transform: translateY(-15px);
+            transform: translate(-5px, -15px);
+          }
+          75% {
+            transform: translate(5px, -5px);
           }
           100% {
-            transform: translateY(0px);
+            transform: translate(0px, 0px);
+          }
+        }
+        @keyframes float-alt {
+          0% {
+            transform: translate(0px, 0px);
+          }
+          25% {
+            transform: translate(-5px, -12px);
+          }
+          50% {
+            transform: translate(5px, -8px);
+          }
+          75% {
+            transform: translate(-3px, 0px);
+          }
+          100% {
+            transform: translate(0px, 0px);
           }
         }
       `}</style>
