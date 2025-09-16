@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import Button from '@/components/ui/Button';
 import Image from 'next/image';
 
-export default function HeroSection({ loading }) {
+export default function HeroSection() {
   const [watchVideoClicked, setWatchVideoClicked] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [scrollY, setScrollY] = useState(0);

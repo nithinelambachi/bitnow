@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-export default function TrustedPlatformSection({ loading }) {
+export default function TrustedPlatformSection() {
   const [hoveredImage, setHoveredImage] = useState(null);
 
   const platformImages = [
@@ -56,19 +56,6 @@ export default function TrustedPlatformSection({ loading }) {
           </div>
 
           <div className="flex flex-col lg:flex-row gap-[23px] sm:gap-[35px] lg:gap-[46px] w-full max-w-[1200px] lg:w-[88%]">
-            {loading ? (
-              <>
-                {[...Array(3)]?.map((_, index) => (
-                  <div 
-                    key={index}
-                    className="flex flex-col justify-start items-center w-full lg:w-[372px] animate-pulse"
-                  >
-                    <div className="w-full h-[300px] sm:h-[400px] lg:h-[494px] bg-gray-600 rounded-[24px]"></div>
-                  </div>
-                ))}
-              </>
-            ) : (
-              <>
                 {platformImages?.map((image, index) => (
                   <div 
                     key={index}
@@ -110,8 +97,6 @@ export default function TrustedPlatformSection({ loading }) {
                     )}
                   </div>
                 ))}
-              </>
-            )}
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
 import { useState } from 'react';
  import Image from'next/image';
 
-export default function FAQSection({ loading }) {
+export default function FAQSection() {
   const [expandedItem, setExpandedItem] = useState(0)
 
   const faqItems = [
@@ -58,16 +58,6 @@ export default function FAQSection({ loading }) {
           </div>
 
           <div className="w-full max-w-[1000px] bg-[#5d767e] rounded-[24px] p-4 sm:p-6 lg:p-6">
-            {loading ? (
-              <div className="flex flex-col gap-[40px] sm:gap-[60px] lg:gap-[80px] animate-pulse">
-                {[...Array(4)].map((_, index) => (
-                  <div key={index} className="flex flex-col gap-2">
-                    <div className="h-8 bg-gray-600 rounded w-3/4"></div>
-                    {index === 0 && <div className="h-16 bg-gray-600 rounded w-full mt-4"></div>}
-                  </div>
-                ))}
-              </div>
-            ) : (
               <div className="flex flex-col gap-[40px] sm:gap-[60px] lg:gap-[80px]">
                 {faqItems.map((item, index) => (
                   <div key={item.id} className="flex flex-col gap-[6px]">
@@ -104,7 +94,6 @@ export default function FAQSection({ loading }) {
                   </div>
                 ))}
               </div>
-            )}
           </div>
         </div>
       </div>

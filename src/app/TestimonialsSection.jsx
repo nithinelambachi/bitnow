@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
-export default function TestimonialsSection({ loading }) {
+export default function TestimonialsSection() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const animationFrameRef = useRef(null);
   const isAnimatingRef = useRef(false);
@@ -181,19 +181,6 @@ export default function TestimonialsSection({ loading }) {
             ))}
           </div>
         </div>
-
-        {loading && (
-          <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex gap-4 overflow-hidden">
-              {[...Array(8)]?.map((_, index) => (
-                <div 
-                  key={index}
-                  className="flex-shrink-0 w-[330px] h-[500px] bg-gray-600 rounded-[24px] animate-pulse"
-                />
-              ))}
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );

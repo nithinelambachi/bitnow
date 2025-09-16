@@ -1,23 +1,11 @@
 'use client';
-import { useState, useEffect } from 'react';
  import Header from'@/components/common/Header';
  import Footer from'@/components/common/Footer';
  import HeroSection from'./HeroSection';
 import TrustedPlatformSection from './TrustedPlatformSection';
  import TestimonialsSection from'./TestimonialsSection';
  import FAQSection from'./FAQSection';
-
 export default function BitNowHomePage() {
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false)
-    }, 1000)
-
-    return () => clearTimeout(timer)
-  }, [])
-
   return (
     <div className="min-h-screen bg-[#091c23] relative overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -52,10 +40,10 @@ export default function BitNowHomePage() {
         <Header />
         
         <main>
-          <HeroSection loading={loading} />
-          <TrustedPlatformSection loading={loading} />
-          <TestimonialsSection loading={loading} />
-          <FAQSection loading={loading} />
+          <HeroSection />
+          <TrustedPlatformSection />
+          <TestimonialsSection />
+          <FAQSection />
         </main>
 
         <Footer />
