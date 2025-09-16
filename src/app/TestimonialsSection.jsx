@@ -134,8 +134,15 @@ export default function TestimonialsSection({ loading }) {
       </div>
 
       <div className="relative w-full px-4 pb-6">
-        <div className="absolute bottom-0 left-0 w-[32%] h-[126px] bg-[#fd9c0033] rounded-[62px]"></div>
-        
+        <div className="absolute bottom-0 left-0 w-[105px] h-[126px]">
+          <Image
+            src="/images/Ellipse.png"
+            alt="decorative ellipse"
+            width={105}
+            height={126}
+            className="object-contain"
+          />
+        </div>
         <div className="relative z-10 flex flex-col gap-2 justify-start items-center w-[76%] ml-auto">
           <p 
             className="text-base font-normal leading-relaxed text-white w-full"
