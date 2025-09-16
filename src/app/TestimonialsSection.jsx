@@ -13,7 +13,8 @@ export default function TestimonialsSection() {
       title: 'Crypto Investor',
       avatar: '/images/img_rectangle_4476.png',
       content: 'Amazing trading platform experience.',
-      description: 'Lorem ipsum dolor sit amet consectetur. Ipsum eu aenean dignissim sagittis malesuada consectetur. Suspendisse lectus mi nulla consectetur elementum.'
+      description:
+        'Lorem ipsum dolor sit amet consectetur. Ipsum eu aenean dignissim sagittis malesuada consectetur. Suspendisse lectus mi nulla consectetur elementum.',
     },
     {
       id: 2,
@@ -21,7 +22,8 @@ export default function TestimonialsSection() {
       title: 'Portfolio Manager',
       avatar: '/images/img_rectangle_4476_148x148.png',
       content: 'Professional grade cryptocurrency tools.',
-      description: 'Lorem ipsum dolor sit amet consectetur. Ipsum eu aenean dignissim sagittis malesuada consectetur. Suspendisse lectus mi nulla consectetur elementum.'
+      description:
+        'Lorem ipsum dolor sit amet consectetur. Ipsum eu aenean dignissim sagittis malesuada consectetur. Suspendisse lectus mi nulla consectetur elementum.',
     },
     {
       id: 3,
@@ -29,7 +31,8 @@ export default function TestimonialsSection() {
       title: 'Day Trader',
       avatar: '/images/img_rectangle_4476_1.png',
       content: 'Real-time analytics changed my trading.',
-      description: 'Lorem ipsum dolor sit amet consectetur. Ipsum eu aenean dignissim sagittis malesuada consectetur. Suspendisse lectus mi nulla consectetur elementum.'
+      description:
+        'Lorem ipsum dolor sit amet consectetur. Ipsum eu aenean dignissim sagittis malesuada consectetur. Suspendisse lectus mi nulla consectetur elementum.',
     },
     {
       id: 4,
@@ -37,7 +40,8 @@ export default function TestimonialsSection() {
       title: 'Investment Advisor',
       avatar: '/images/img_rectangle_4476_2.png',
       content: 'Secure and reliable cryptocurrency platform.',
-      description: 'Lorem ipsum dolor sit amet consectetur. Ipsum eu aenean dignissim sagittis malesuada consectetur. Suspendisse lectus mi nulla consectetur elementum.'
+      description:
+        'Lorem ipsum dolor sit amet consectetur. Ipsum eu aenean dignissim sagittis malesuada consectetur. Suspendisse lectus mi nulla consectetur elementum.',
     },
     {
       id: 5,
@@ -45,7 +49,8 @@ export default function TestimonialsSection() {
       title: 'Blockchain Analyst',
       avatar: '/images/img_rectangle_4476.png',
       content: 'Advanced features for serious traders.',
-      description: 'Lorem ipsum dolor sit amet consectetur. Ipsum eu aenean dignissim sagittis malesuada consectetur. Suspendisse lectus mi nulla consectetur elementum.'
+      description:
+        'Lorem ipsum dolor sit amet consectetur. Ipsum eu aenean dignissim sagittis malesuada consectetur. Suspendisse lectus mi nulla consectetur elementum.',
     },
     {
       id: 6,
@@ -53,7 +58,8 @@ export default function TestimonialsSection() {
       title: 'Cryptocurrency Expert',
       avatar: '/images/img_rectangle_4476_1.png',
       content: 'Best platform for institutional trading.',
-      description: 'Lorem ipsum dolor sit amet consectetur. Ipsum eu aenean dignissim sagittis malesuada consectetur. Suspendisse lectus mi nulla consectetur elementum.'
+      description:
+        'Lorem ipsum dolor sit amet consectetur. Ipsum eu aenean dignissim sagittis malesuada consectetur. Suspendisse lectus mi nulla consectetur elementum.',
     },
     {
       id: 7,
@@ -61,7 +67,8 @@ export default function TestimonialsSection() {
       title: 'Market Researcher',
       avatar: '/images/img_rectangle_4476_2.png',
       content: 'Comprehensive market analysis tools.',
-      description: 'Lorem ipsum dolor sit amet consectetur. Ipsum eu aenean dignissim sagittis malesuada consectetur. Suspendisse lectus mi nulla consectetur elementum.'
+      description:
+        'Lorem ipsum dolor sit amet consectetur. Ipsum eu aenean dignissim sagittis malesuada consectetur. Suspendisse lectus mi nulla consectetur elementum.',
     },
     {
       id: 8,
@@ -69,17 +76,18 @@ export default function TestimonialsSection() {
       title: 'Financial Advisor',
       avatar: '/images/img_rectangle_4476_148x148.png',
       content: 'Perfect for diversified crypto portfolios.',
-      description: 'Lorem ipsum dolor sit amet consectetur. Ipsum eu aenean dignissim sagittis malesuada consectetur. Suspendisse lectus mi nulla consectetur elementum.'
-    }
+      description:
+        'Lorem ipsum dolor sit amet consectetur. Ipsum eu aenean dignissim sagittis malesuada consectetur. Suspendisse lectus mi nulla consectetur elementum.',
+    },
   ];
 
   useEffect(() => {
     const animate = () => {
-      setScrollPosition(prev => {
-        const newPos = prev - 5.8; 
-        const cardWidth = 346; 
+      setScrollPosition((prev) => {
+        const newPos = prev - 0.9;
+        const cardWidth = 346;
         const totalWidth = testimonials?.length * cardWidth;
-        
+
         return newPos <= -totalWidth ? 0 : newPos;
       });
 
@@ -106,15 +114,15 @@ export default function TestimonialsSection() {
             loading="lazy"
           />
         </div>
-        
+
         <div className="flex flex-col gap-[2px] justify-start items-center w-full">
-          <h3 
+          <h3
             className="text-base font-normal leading-[22px] text-white text-center"
             style={{ fontFamily: 'Open Sans' }}
           >
             {testimonial?.name}
           </h3>
-          <p 
+          <p
             className="text-sm font-normal leading-[20px] text-[#f1f1f1] text-center"
             style={{ fontFamily: 'Open Sans' }}
           >
@@ -134,13 +142,13 @@ export default function TestimonialsSection() {
           />
         </div>
         <div className="relative z-10 flex flex-col gap-2 justify-start items-center w-[76%] ml-auto">
-          <p 
+          <p
             className="text-base font-normal leading-relaxed text-white w-full"
             style={{ fontFamily: 'Open Sans' }}
           >
             {testimonial?.content}
           </p>
-          <p 
+          <p
             className="text-sm font-normal leading-relaxed text-[#f1f1f1] w-full"
             style={{ fontFamily: 'Open Sans' }}
           >
@@ -154,18 +162,17 @@ export default function TestimonialsSection() {
   return (
     <section className="w-full overflow-hidden bg-transparent">
       <div className="w-full py-8 sm:py-12 lg:py-16">
-        
         <div className="relative">
-          <div 
+          <div
             className="flex gap-4 will-change-transform"
             style={{
               transform: `translateX(${scrollPosition}px)`,
-              width: 'max-content'
+              width: 'max-content',
             }}
           >
             {[...testimonials, ...testimonials, ...testimonials]?.map((testimonial, index) => (
-              <TestimonialCard 
-                key={`testimonial-${testimonial?.id}-${index}`} 
+              <TestimonialCard
+                key={`testimonial-${testimonial?.id}-${index}`}
                 testimonial={testimonial}
               />
             ))}

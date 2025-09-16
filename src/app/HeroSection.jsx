@@ -71,37 +71,25 @@ export default function HeroSection() {
                         height={24}
                         className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] mt-4"
                       />
-                      <Button
-                        text="Sustainable Growth"
-                        text_font_size="text-xs"
-                        text_font_family="Roboto"
-                        text_font_weight="font-normal"
-                        text_line_height="leading-snug"
-                        text_color="text-white"
-                        fill_background_color="bg-[#5e81ff]"
-                        border_border_radius="rounded-[1px_16px_12px_16px]"
-                        effect_box_shadow="0px_4px_8px_#0d99ff51"
-                        border_border="border border-[#5e81ff]"
-                        padding="p-2.5"
-                        margin="mt-[-4px] ml-4"
-                        className="shadow-[0px_4px_8px_#0d99ff51] cursor-none"
-                        layout_width="auto"
-                        position="relative"
-                        variant="primary"
-                        size="small"
-                        onClick={() => {}}
-                      />
+                      <div className="flex justify-center items-center shadow-[0px_4px_8px_#ffa62951] border border-[#5e81ff] rounded-[12px_16px_1px_16px] bg-[#5e81ff] px-2 py-2">
+                        <span
+                          className="text-xs font-normal leading-[15px] text-[#fafafa]"
+                          style={{ fontFamily: 'Roboto' }}
+                        >
+                          Sustainable Growth
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="absolute top-0 right-0 w-full h-24 flex justify-end items-start">
+                <div className="absolute bottom-0 right-0 w-full flex justify-end items-end pb-4">
                   <div
                     className="transition-transform duration-300 ease-out flex flex-col items-end"
                     style={{
                       willChange: 'transform',
                       animation: 'float 4s ease-in-out infinite 0.5s',
-                      marginRight: '72px',
+                      marginRight: '10%',
                     }}
                   >
                     <div className="flex justify-center items-center shadow-[0px_4px_8px_#ffa62951] border border-[#5e81ff] rounded-[12px_16px_1px_16px] bg-[#5e81ff] px-2 py-2">
