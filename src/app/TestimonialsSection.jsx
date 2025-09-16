@@ -75,15 +75,9 @@ export default function TestimonialsSection() {
   ];
 
   useEffect(() => {
-    if (isAnimatingRef?.current) return;
-
     const animate = () => {
-      if (!isAnimatingRef?.current) {
-        isAnimatingRef.current = true;
-      }
-
       setScrollPosition(prev => {
-        const newPos = prev - 1.2; 
+        const newPos = prev - 5.8; 
         const cardWidth = 346; 
         const totalWidth = testimonials?.length * cardWidth;
         
@@ -96,12 +90,9 @@ export default function TestimonialsSection() {
     animationFrameRef.current = requestAnimationFrame(animate);
 
     return () => {
-      if (animationFrameRef?.current) {
-        cancelAnimationFrame(animationFrameRef?.current);
-      }
-      isAnimatingRef.current = false;
+      cancelAnimationFrame(animationFrameRef.current);
     };
-  }, [testimonials?.length]);
+  }, [testimonials.length]);
 
   const TestimonialCard = ({ testimonial }) => (
     <div className="flex flex-col gap-[18px] justify-start items-center w-[330px] flex-shrink-0 bg-[#1f54644c] rounded-[24px] shadow-[8px_6px_30px_#00000028] hover:shadow-[8px_6px_40px_#00000040] transition-shadow duration-300 mx-2">

@@ -7,7 +7,7 @@ const buttonClasses = cva(
   {
     variants: {
       variant: {
-        primary: 'bg-primary-background text-primary-foreground hover:bg-primary-dark focus:ring-primary-background',
+        primary: 'bg-primary-background text-primary-foreground ',
         secondary: 'bg-secondary-background text-secondary-foreground hover:bg-secondary-dark focus:ring-secondary-background',
         outline: 'border-2 border-primary-background text-primary-background bg-transparent hover:bg-primary-light focus:ring-primary-background',
         danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500',
